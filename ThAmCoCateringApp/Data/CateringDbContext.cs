@@ -26,18 +26,20 @@ namespace ThAmCoCateringApp.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            
             //Compound key
             builder.Entity<MenuFoodItem>().HasKey(mfi => new { mfi.MenuId, mfi.FoodItemId });
 
-            builder.Entity<FoodItem>()
-                .HasMany(mfi => mfi.MenuFoodItems)
-                .WithOne(fi => fi.FoodItem)
+            builder.Entity<MenuFoodItem>()
+                .HasOne(fi => fi.FoodItem)
+                .WithMany(mfi => mfi.MenuFoodItems)
                 .HasForeignKey(fi => fi.FoodItemId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<Menu>()
-                .HasMany(mfi => mfi.MenuFoodItems)
-                .WithOne(m => m.Menu)
+            builder.Entity<MenuFoodItem>()
+                .HasOne(m => m.Menu)
+                .WithMany(mfi => mfi.MenuFoodItems)
+                .HasForeignKey(m => m.MenuId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<Menu>().HasData(
