@@ -89,9 +89,21 @@ namespace ThAmCoCateringApp.Data.Migrations
                 columns: new[] { "FoodItemId", "Description", "UnitPrice" },
                 values: new object[,]
                 {
-                    { 1, "Chicken curry", 10f },
-                    { 2, "Steamed rice", 20f },
-                    { 3, "Boiled eggs", 30f }
+                    { 1, "Spicy Chicken Curry with Coconut Milk", 10.5f },
+                    { 2, "Steamed Jasmine Rice", 5f },
+                    { 3, "Hard-Boiled Free-Range Eggs", 3.5f },
+                    { 4, "Grilled Salmon with Lemon Butter Sauce", 18.75f },
+                    { 5, "Caesar Salad with Grilled Chicken", 12f },
+                    { 6, "Margherita Pizza with Fresh Basil", 15f },
+                    { 7, "Beef Burger with Caramelized Onions", 14.25f },
+                    { 8, "Vegan Quinoa Salad with Avocado", 11.5f },
+                    { 9, "Creamy Mushroom Risotto", 16.3f },
+                    { 10, "BBQ Ribs with Coleslaw", 20f },
+                    { 11, "Chocolate Lava Cake with Vanilla Ice Cream", 8.75f },
+                    { 12, "Garlic Butter Shrimp Skewers", 19.9f },
+                    { 13, "Vegetable Stir-Fry with Tofu", 9.4f },
+                    { 14, "Penne Alfredo with Grilled Chicken", 13.6f },
+                    { 15, "Fresh Fruit Platter with Seasonal Berries", 7.2f }
                 });
 
             migrationBuilder.InsertData(
@@ -101,7 +113,19 @@ namespace ThAmCoCateringApp.Data.Migrations
                 {
                     { 1, "Vegetarian" },
                     { 2, "Non-Vegetarian" },
-                    { 3, "Vegan" }
+                    { 3, "Vegan" },
+                    { 4, "Gluten-Free" },
+                    { 5, "Pescatarian" },
+                    { 6, "Keto" },
+                    { 7, "Paleo" },
+                    { 8, "Low-Carb" },
+                    { 9, "High-Protein" },
+                    { 10, "Dairy-Free" },
+                    { 11, "Nut-Free" },
+                    { 12, "Halal" },
+                    { 13, "Kosher" },
+                    { 14, "Organic" },
+                    { 15, "Mediterranean" }
                 });
 
             migrationBuilder.InsertData(
@@ -110,8 +134,20 @@ namespace ThAmCoCateringApp.Data.Migrations
                 values: new object[,]
                 {
                     { 1, 101, 1, 10 },
-                    { 2, 201, 2, 20 },
-                    { 3, 301, 3, 30 }
+                    { 2, 102, 2, 20 },
+                    { 3, 103, 3, 30 },
+                    { 4, 104, 4, 15 },
+                    { 5, 105, 5, 25 },
+                    { 6, 106, 6, 35 },
+                    { 7, 107, 7, 40 },
+                    { 8, 108, 8, 12 },
+                    { 9, 109, 9, 18 },
+                    { 10, 110, 10, 22 },
+                    { 11, 111, 11, 28 },
+                    { 12, 112, 12, 32 },
+                    { 13, 113, 13, 45 },
+                    { 14, 114, 14, 50 },
+                    { 15, 115, 15, 60 }
                 });
 
             migrationBuilder.InsertData(
@@ -120,8 +156,20 @@ namespace ThAmCoCateringApp.Data.Migrations
                 values: new object[,]
                 {
                     { 1, 1 },
-                    { 2, 2 },
-                    { 3, 3 }
+                    { 2, 1 },
+                    { 3, 2 },
+                    { 4, 2 },
+                    { 5, 3 },
+                    { 8, 3 },
+                    { 7, 4 },
+                    { 12, 5 },
+                    { 9, 6 },
+                    { 13, 7 },
+                    { 11, 8 },
+                    { 14, 9 },
+                    { 6, 10 },
+                    { 10, 11 },
+                    { 15, 12 }
                 });
 
             migrationBuilder.CreateIndex(
